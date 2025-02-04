@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react";
 import { FaArrowLeftLong } from "react-icons/fa6";
 import { useParams, Link } from "react-router-dom";
+import Loader from "../components/Loader";
 
 const CountryDetails = () => {
   const { code } = useParams(); // Get the country code from the URL
@@ -15,7 +16,7 @@ const CountryDetails = () => {
   }, [code]);
 
   if (!country) {
-    return <div>Loading...</div>; // Show loading while fetching data
+    return <Loader />; // Show loading while fetching data
   }
 
 

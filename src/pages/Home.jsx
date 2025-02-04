@@ -38,6 +38,11 @@ const Home = () => {
   
     });
 
+
+    if (!countries.length) {
+      return <h1>Loading...</h1>
+    }
+
   return (
   <section className="px-4 lg:px-24 mt-12">
         <div className="flex flex-wrap gap-4 justify-between items-center">
@@ -48,6 +53,7 @@ const Home = () => {
           />
         </div>
         <section className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-16 mt-16">
+          
           {filteredCountries.map((country) => (
             <Link
               to={`/country/${country.cca2}`} // Navigate to country details page
