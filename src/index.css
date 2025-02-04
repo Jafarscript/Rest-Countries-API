@@ -1,0 +1,7 @@
+@import "tailwindcss";
+
+
+
+:root{
+  --input: hsl(0, 0%, 52%)
+}
