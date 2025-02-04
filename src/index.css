@@ -1,7 +1,4 @@
 @import "tailwindcss";
 
 
-
-:root{
-  --input: hsl(0, 0%, 52%)
-}
+@custom-variant dark (&:where(.dark, .dark *));
